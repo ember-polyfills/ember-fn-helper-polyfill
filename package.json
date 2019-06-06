@@ -1,13 +1,14 @@
 {
   "name": "ember-fn-helper-polyfill",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A polyfill for the fn helper provided by Ember in 3.11+",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "polyfill"
   ],
-  "repository": "",
+  "repository": "https://github.com/rwjblue/ember-fn-helper-polyfill",
   "license": "MIT",
-  "author": "",
+  "author": "Robert Jackson <me@rwjblue.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
