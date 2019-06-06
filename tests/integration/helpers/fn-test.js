@@ -18,7 +18,7 @@ module('Integration | Helper | fn', function(hooks) {
     }));
 
     let testContext = this;
-    this.owner.register('component:stash', Component.extend({
+    this.owner.register('component:x-stash', Component.extend({
         init() {
           this._super(...arguments);
           testContext.stashedFn = this.stashedFn;
@@ -79,7 +79,7 @@ module('Integration | Helper | fn', function(hooks) {
     this.set('arg1', 'foo');
     this.set('arg2', 'bar');
 
-    await render(hbs`{{stash stashedFn=(fn this.myFunc this.arg1 this.arg2)}}`);
+    await render(hbs`{{x-stash stashedFn=(fn this.myFunc this.arg1 this.arg2)}}`);
 
     assert.equal(this.stashedFn(), 'arg1: foo, arg2: bar');
 
@@ -105,7 +105,7 @@ module('Integration | Helper | fn', function(hooks) {
     this.set('arg2', 'bar');
 
 
-    await render(hbs`{{stash stashedFn=(fn this.myFunc this.arg1 this.arg2)}}`);
+    await render(hbs`{{x-stash stashedFn=(fn this.myFunc this.arg1 this.arg2)}}`);
 
     assert.equal(this.stashedFn(), 'arg1: foo, arg2: bar');
 
@@ -142,7 +142,7 @@ module('Integration | Helper | fn', function(hooks) {
     });
     this.set('arg1', 'foo');
     this.set('arg2', 'bar');
-    await render(hbs`{{stash stashedFn=(fn this.myFunc this.arg1)}}`);
+    await render(hbs`{{x-stash stashedFn=(fn this.myFunc this.arg1)}}`);
 
     assert.throws(() => {
       this.stashedFn();
@@ -159,7 +159,7 @@ module('Integration | Helper | fn', function(hooks) {
       assert.strictEqual(this, null, 'this is bound to null in production builds');
     });
 
-    await render(hbs`{{stash stashedFn=(fn this.myFunc this.arg1)}}`);
+    await render(hbs`{{x-stash stashedFn=(fn this.myFunc this.arg1)}}`);
 
     this.stashedFn();
   });
@@ -171,7 +171,7 @@ module('Integration | Helper | fn', function(hooks) {
     this.set('arg1', 'foo');
     this.set('arg2', 'bar');
 
-    await render(hbs`{{stash stashedFn=(fn (action this.myFunc) this.arg1)}}`);
+    await render(hbs`{{x-stash stashedFn=(fn (action this.myFunc) this.arg1)}}`);
 
     assert.equal(this.stashedFn(), 'arg1: foo, arg2: bar');
   });
@@ -210,7 +210,7 @@ module('Integration | Helper | fn', function(hooks) {
     this.set('arg1', 'foo');
     this.set('arg2', 'bar');
 
-    await render(hbs`{{this.arg1}}{{stash stashedFn=(fn (mut this.arg1) this.arg2)}}`);
+    await render(hbs`{{this.arg1}}{{x-stash stashedFn=(fn (mut this.arg1) this.arg2)}}`);
 
     assert.dom().hasText('foo');
 
