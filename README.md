@@ -62,7 +62,7 @@ Let's take look at what that means in a couple circumstances:
 
 - When invoked as `this.args.select()` the `handleSelected` function will
   receive the `item` from the loop as its first and only argument.
-- When invoked as `this.args.selected('foo')` the `handleSelected` function
+- When invoked as `this.args.select('foo')` the `handleSelected` function
   will receive the `item` from the loop as its first argument and the
   string `'foo'` as its second argument.
 
