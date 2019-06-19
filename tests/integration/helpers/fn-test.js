@@ -1,4 +1,4 @@
-import { module, test, skip } from 'qunit';
+import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, setupOnerror } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
@@ -204,9 +204,7 @@ module('Integration | Helper | fn', function(hooks) {
     assert.dom().hasText('arg1: foo, arg2: bar, arg3: qux');
   });
 
-  // this can't easily be polyfilled because our helper does not receive
-  // the mut reference, it receives the raw value
-  skip('can be used on the result of `mut`', async function(assert) {
+  test('can be used on the result of `mut`', async function(assert) {
     this.set('arg1', 'foo');
     this.set('arg2', 'bar');
 
