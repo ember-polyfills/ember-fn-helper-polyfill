@@ -33,7 +33,7 @@ module.exports = {
 
   _buildPlugin() {
     return {
-      name: 'component-attributes',
+      name: 'fn-helper-polyfill',
       plugin: require('./lib/ast-transform'),
       baseDir() {
         return __dirname;
