@@ -1,3 +1,18 @@
+## v1.0.1 (2019-06-19)
+
+#### :bug: Bug Fix
+* [#7](https://github.com/rwjblue/ember-fn-helper-polyfill/pull/7) Fix usage of `(fn (mut this.something) someValue)`. ([@rwjblue](https://github.com/rwjblue))
+
+#### :memo: Documentation
+* [#4](https://github.com/rwjblue/ember-fn-helper-polyfill/pull/4) Fix function name in documentation example. ([@Alonski](https://github.com/Alonski))
+
+#### :house: Internal
+* [#5](https://github.com/rwjblue/ember-fn-helper-polyfill/pull/5) Fix tests when running on Ember < 2.18. ([@rwjblue](https://github.com/rwjblue))
+
+#### Committers: 2
+- Alon Bukai ([@Alonski](https://github.com/Alonski))
+- Robert Jackson ([@rwjblue](https://github.com/rwjblue))
+
 ## v1.0.0 (2019-06-06)
 
 #### :rocket: Enhancement
