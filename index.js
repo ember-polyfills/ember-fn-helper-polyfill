@@ -17,6 +17,30 @@ module.exports = {
     this.shouldPolyfill = emberVersion.lt('3.11.0-alpha.1');
   },
 
+  setupPreprocessorRegistry(type, registry) {
+    if (this.shouldPolyfill) {
+      let pluginObj = this._buildPlugin();
+
+      pluginObj.parallelBabel = {
+        requireFile: __filename,
+        buildUsing: '_buildPlugin',
+        params: {},
+      };
+
+      registry.add('htmlbars-ast-plugin', pluginObj);
+    }
+  },
+
+  _buildPlugin() {
+    return {
+      name: 'component-attributes',
+      plugin: require('./lib/ast-transform'),
+      baseDir() {
+        return __dirname;
+      },
+    };
+  },
+
   treeFor() {
     if (!this.shouldPolyfill) {
       return;
