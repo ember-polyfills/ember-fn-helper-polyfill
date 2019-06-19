@@ -1,6 +1,6 @@
 {
   "name": "ember-fn-helper-polyfill",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A polyfill for the fn helper provided by Ember in 3.11+",
   "keywords": [
     "ember-addon",

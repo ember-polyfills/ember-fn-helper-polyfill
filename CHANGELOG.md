@@ -1,3 +1,11 @@
+## v1.0.2 (2019-06-19)
+
+#### :bug: Bug Fix
+* [#8](https://github.com/rwjblue/ember-fn-helper-polyfill/pull/8) Update name of the registered AST plugin. ([@rwjblue](https://github.com/rwjblue))
+
+#### Committers: 1
+- Robert Jackson ([@rwjblue](https://github.com/rwjblue))
+
 ## v1.0.1 (2019-06-19)
 
 #### :bug: Bug Fix
